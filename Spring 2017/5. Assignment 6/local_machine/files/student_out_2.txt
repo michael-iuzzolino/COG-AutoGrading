@@ -1,0 +1,8 @@
+Darlene,78.1438,C
+Dewey,76.7747,C
+Julius,82.1452,B
+Lora,85.9616,B
+Roland,87.3481,B
+Samantha,81.3003,B
+Shane,87.3023,B
+Sheldon,81.9775,B

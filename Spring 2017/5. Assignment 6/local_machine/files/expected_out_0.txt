@@ -1,0 +1,6 @@
+Bernard, 88.812248, B
+Charlotte, 85.76950571428571, B
+Ernesto, 81.01003, B
+Joann, 68.27705499999999, D
+Michael, 81.096705, B
+Roger, 81.982294, B

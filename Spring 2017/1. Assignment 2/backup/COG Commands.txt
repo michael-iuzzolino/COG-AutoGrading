@@ -1,0 +1,35 @@
+
+
+COG-CLI Command
+
+
+./cog-cli.py \
+  --server csci1300 util setup-assignment \
+  --asn_name "TEST TEST TEST" --env "local" \
+  --tst_name "Main" --tester "script" \
+  --maxscore 100 \
+  --path /Users/mliuzzolino/Dropbox/CU\ Boulder/Spring\ 2017/CSCI\ 1300\ -\ TA/1.\ COG/1.\ Assignments/1.\ Assignment\ 2/COG.zip \
+  --extract \
+  --path_script '/COG/cog_main.py' \
+  --rptmod moodle \
+  --rptmod_opt moodle_cm_id 49053845 \
+  --activate
+
+
+
+
+Recitation 2 UID: 28ee81d6-fe92-4fe4-94d5-fa0d070e390a
+Assignment 2 UID: 72cf29ba-6e0f-4d11-81ba-ca721aa2bde7
+Test Assignment 3 UID: e7d6093e-c7b0-4ea6-88c6-4f2c676180ff
+
+
+
+./cog-cli.py --server csci1300 assignment delete --uid b63ccf40-0279-4f38-bb0c-21095b06306e
+
+./cog-cli.py --server csci1300 assignment deactivate --uid e7d6093e-c7b0-4ea6-88c6-4f2c676180ff
+./cog-cli.py --server csci1300 assignment activate --uid e7d6093e-c7b0-4ea6-88c6-4f2c676180ff
+
+./cog-cli.py --server csci1300 assignment list
+
+
+

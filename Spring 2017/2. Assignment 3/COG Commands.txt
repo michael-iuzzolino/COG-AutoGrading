@@ -1,0 +1,30 @@
+
+
+UID: e8c009c5-8db5-4ab2-8156-fc2631c0f1ba
+
+COG-CLI Command
+cmid: 6505
+
+./cog-cli.py \
+  --server csci1300 util setup-assignment \
+  --asn_name "Assignment 3 (inactivated)" --env "local" \
+  --tst_name "Main" --tester "script" \
+  --maxscore 0 \
+  --path /Users/mliuzzolino/Dropbox/CU\ Boulder/Spring\ 2017/CSCI\ 1300\ -\ TA/1.\ COG/1.\ Assignments/2.\ Assignment\ 3/COG.zip \
+  --extract \
+  --path_script '/COG/cog_main.py' \
+  --rptmod moodle \
+  --rptmod_opt moodle_cm_id 650455 \
+  --activate
+
+
+
+
+./cog-cli.py --server csci1300 assignment delete --uid e8c009c5-8db5-4ab2-8156-fc2631c0f1ba
+
+./cog-cli.py --server csci1300 assignment deactivate --uid e8c009c5-8db5-4ab2-8156-fc2631c0f1ba
+
+./cog-cli.py --server csci1300 assignment list
+
+
+
