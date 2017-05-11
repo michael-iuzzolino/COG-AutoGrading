@@ -1,8 +1,9 @@
-Darlene,78.1438,C
-Dewey,76.7747,C
-Julius,82.1452,B
-Lora,85.9616,B
-Roland,87.3481,B
-Samantha,81.3003,B
-Shane,87.3023,B
-Sheldon,81.9775,B
+Aaron, 76.8315, C
+Clarence, 84.2249, B
+Danielle, 79.9925, C
+Felix, 85.7888, B
+Garrett, 81.1498, B
+Louis, 86.0377, B
+Mae, 92.1577, A
+Patty, 81.1229, B
+Shelly, 84.5558, B

@@ -100,7 +100,7 @@ class GradeSubmission():
         # Set deductions
         self.missing_file_deduction = self.max_score
         self.compile_fail_deduction = self.max_score
-        self.missing_function_deduction = self.max_score / len(self.required_functions)
+        self.missing_function_deduction = self.max_score / len(self.required_functions) * 2.2
         self.no_answer_deduction = self.max_score
 
         self.deduction_dict = {"1" : 5,     # 1 test case, 5 pts each
@@ -351,7 +351,7 @@ class GradeSubmission():
                         student_grade = student_array[2].strip()
                     except IndexError:
                         studentFeedback("{:2s}{:10s}{:40s}{:10s}{:40s}".format("", "** ERROR:", "Testcase {}: Your file is not comma separated!".format(test_case+1), "", ""))
-                        total_points_lost.append([self.deduction_dict[str(function_num)], "ERROR: Testcase {}: Your file is not comma separated.".format(test_case+1, function_name)])
+                        total_points_lost.append([self.deduction_dict[str(function_num)], "ERROR: Testcase {}: Your file is not comma separatedsh .".format(test_case+1, function_name)])
                         continue
 
 
@@ -581,7 +581,6 @@ class GradeSubmission():
                 for line in infile:
                     outfile.write(line)
 
-
             # Declare the helper file's path
             self.helper_file_path = submission_write_path
 
@@ -600,6 +599,7 @@ class GradeSubmission():
                 continue
 
             with open(assignment_path, "r") as student_file, open(self.student_helper_file_paths[index], "w") as student_helper_file:
+
                 for line in student_file:
                     student_helper_file.write(line)
 
@@ -611,7 +611,7 @@ class GradeSubmission():
 
 
         # Flatten the file content list
-        flattened_file_content_list = [item.strip().lower() for file_i in self.student_files_content for item in file_i]
+        flattened_file_content_list = [item.strip() for file_i in self.student_files_content for item in file_i]
         self.student_files_content = flattened_file_content_list
 
 
@@ -621,7 +621,7 @@ class GradeSubmission():
         with a function checker program."""
 
         # Define required functions for checking in file and convert them to lower case
-        check_required_functions = [self.split_function_string(func.lower()) for func in self.required_functions]
+        check_required_functions = [self.split_function_string(func) for func in self.required_functions]
 
 
 
@@ -644,23 +644,23 @@ class GradeSubmission():
             if prev_len > len(check_required_functions):
                 number_of_found_functions += 1
 
-
         # Check if the required number of functions list is non zero - this means some were not found in student file
         if number_of_found_functions != number_of_required_functions:
             # Iterate through required functions that were not found
 
             for required_function in check_required_functions:
                 # Iterate through the full function named list to find the correct one for printing to student in deductions
-
+                studentFeedback("\n")
                 for full_req_fnx in self.required_functions:
-                    full_req_fnx_check = ' '.join(self.split_function_string(full_req_fnx.lower()))
+                    full_req_fnx_check = ' '.join(self.split_function_string(full_req_fnx))
 
                     if ' '.join(required_function) == full_req_fnx_check:
                         studentFeedback("\tMISSING: {:s}".format(full_req_fnx))
                         self.make_deduction(self.missing_function_deduction, "{:s} function is required, but is missing from or incorrectly defined in your program. Correct this function for full credit.".format(full_req_fnx))
                         found_all_functions = False
 
-                    studentFeedback("\tFOUND: {:s}".format(full_req_fnx_check))
+                    else:
+                        studentFeedback("\tFOUND: {:s}".format(full_req_fnx_check))
 
         # Print student feedback to inform of number required functions found
         studentFeedback("\n\tFound {} / {} required functions".format(number_of_found_functions, number_of_required_functions))
@@ -678,13 +678,24 @@ class GradeSubmission():
 
     def match_function_string(self, user_func, expected_func_list):
 
+        if len(user_func) == 0:
+            return expected_func_list
+
+
+
         for required_func in expected_func_list:
 
-            match = True
-            for (observed_word, expected_word) in zip(user_func, required_func):
-                observed_word = observed_word.replace("_", "")
 
-                if (expected_word != '_') and (observed_word != expected_word):
+
+            if len(user_func) != len(required_func):
+                match = False
+                continue
+
+            match = True
+
+            for (observed_word, expected_word) in zip(user_func, required_func):
+
+                if observed_word not in expected_word or expected_word not in observed_word:
                     match = False
                     break
 

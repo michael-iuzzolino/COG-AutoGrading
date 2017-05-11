@@ -1,0 +1,29 @@
+
+
+UID: 02c0432f-8106-4c00-9441-1bd4d4fd03f8
+CM_ID: 6710
+
+COG-CLI Command
+
+
+./cog-cli.py \
+  --server csci1300 util setup-assignment \
+  --asn_name "Assignment 10 - Recommender System" --env "local" \
+  --tst_name "Main" --tester "script" \
+  --maxscore 100 \
+  --path /Users/mliuzzolino/Dropbox/CU\ Boulder/Spring\ 2017/CSCI\ 1300\ -\ TA/1.\ COG/1.\ Assignments/7.\ Python\ Project/COG.zip \
+  --extract \
+  --path_script '/COG/cog_main.py' \
+  --rptmod moodle \
+  --rptmod_opt moodle_cm_id 6710 \
+  --activate
+
+
+
+
+./cog-cli.py --server csci1300 assignment delete --uid 02c0432f-8106-4c00-9441-1bd4d4fd03f8
+./cog-cli.py --server csci1300 assignment deactivate --uid 02c0432f-8106-4c00-9441-1bd4d4fd03f8
+./cog-cli.py --server csci1300 assignment list
+
+
+

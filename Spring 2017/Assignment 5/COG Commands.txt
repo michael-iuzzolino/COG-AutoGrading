@@ -1,6 +1,6 @@
 
 
-UID: 6901e9a0-6e58-4367-8eb3-efa2858bc707
+UID: 1b1005fa-b8fc-4819-9b05-e6277aadef0b
 
 COG-CLI Command
 
@@ -20,8 +20,8 @@ COG-CLI Command
 
 
 
-./cog-cli.py --server csci1300 assignment delete --uid 1cee7e0a-2c86-4122-9ebd-0dd91e4dfafc
-./cog-cli.py --server csci1300 assignment activate --uid 6901e9a0-6e58-4367-8eb3-efa2858bc707
+./cog-cli.py --server csci1300 assignment delete --uid 1b1005fa-b8fc-4819-9b05-e6277aadef0b
+./cog-cli.py --server csci1300 assignment activate --uid 1b1005fa-b8fc-4819-9b05-e6277aadef0b
 ./cog-cli.py --server csci1300 assignment list
 
 

@@ -1,6 +1,6 @@
 
 
-UID: 2ac85e98-17d8-41b2-93b5-a6ab2a2b5df7
+UID: a6eef668-ee93-4eef-943c-db540181baa0
 CM_ID: 6604
 
 COG-CLI Command
@@ -8,7 +8,7 @@ COG-CLI Command
 
 ./cog-cli.py \
   --server csci1300 util setup-assignment \
-  --asn_name "Assignment 6" --env "local" \
+  --asn_name "Assignment 6 (TEST)" --env "local" \
   --tst_name "Main" --tester "script" \
   --maxscore 50 \
   --path /Users/mliuzzolino/Dropbox/CU\ Boulder/Spring\ 2017/CSCI\ 1300\ -\ TA/1.\ COG/1.\ Assignments/5.\ Assignment\ 6/COG.zip \
@@ -21,8 +21,8 @@ COG-CLI Command
 
 
 
-./cog-cli.py --server csci1300 assignment delete --uid 2ac85e98-17d8-41b2-93b5-a6ab2a2b5df7
-./cog-cli.py --server csci1300 assignment activate --uid 2ac85e98-17d8-41b2-93b5-a6ab2a2b5df7
+./cog-cli.py --server csci1300 assignment delete --uid a6eef668-ee93-4eef-943c-db540181baa0
+./cog-cli.py --server csci1300 assignment activate --uid a6eef668-ee93-4eef-943c-db540181baa0
 ./cog-cli.py --server csci1300 assignment list
 
 

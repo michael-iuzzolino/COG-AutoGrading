@@ -1,13 +1,8 @@
-Bernard,87.2192,B
-Charlotte,79.4566,C
-Ernesto,82.8265,B
-Harry,80.8154,B
-Joann,85.8142,B
-Lucia,79.4698,C
-Michael,93.2071,A
-Nancy,85.9398,B
-Richard,89.2852,B
-Roger,87.5266,B
-Ronald,78.3428,C
-Sonya,86.2812,B
-Tara,82.5685,B
+Bernard, 80.8307, B
+Megan, 89.0119, B
+Nancy, 81.7039, B
+Richard, 81.5545, B
+Roger, 82.9783, B
+Tara, 73.3631, C
+Tasha, 80.1307, B
+Vernon, 80.8207, B

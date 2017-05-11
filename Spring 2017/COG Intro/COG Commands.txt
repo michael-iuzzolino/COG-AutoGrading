@@ -1,0 +1,29 @@
+UID: 28ee81d6-fe92-4fe4-94d5-fa0d070e390a
+
+
+COG-CLI Command
+
+
+./cog-cli.py \
+  --server csci1300 util setup-assignment \
+  --asn_name "Recitation 2" --env "local" \
+  --tst_name "Main" --tester "script" \
+  --maxscore 100 \
+  --path /Users/mliuzzolino/Dropbox/CU\ Boulder/Spring\ 2017/CSCI\ 1300\ -\ TA/1.\ COG/2.\ Recitations/1.\ Recitation\ 2/COG.zip \
+  --extract \
+  --path_script '/COG/cog_main.py' \
+  --rptmod moodle \
+  --rptmod_opt moodle_cm_id 8196 \
+  --activate
+
+
+
+
+
+
+
+./cog-cli.py --server csci1300 assignment delete --uid 28ee81d6-fe92-4fe4-94d5-fa0d070e390a
+./cog-cli.py --server csci1300 assignment list
+
+
+

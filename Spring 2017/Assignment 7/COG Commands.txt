@@ -1,0 +1,29 @@
+
+
+UID: 682eb1fa-1f84-4d2c-8c77-071b78969040
+CM_ID: 6615
+
+COG-CLI Command
+
+
+./cog-cli.py \
+  --server csci1300 util setup-assignment \
+  --asn_name "Assignment 7 (TEST)" --env "local" \
+  --tst_name "Main" --tester "script" \
+  --maxscore 100 \
+  --path /Users/mliuzzolino/Dropbox/CU\ Boulder/Spring\ 2017/CSCI\ 1300\ -\ TA/1.\ COG/1.\ Assignments/6.\ Assignment\ 7/COG.zip \
+  --extract \
+  --path_script '/COG/cog_main.py' \
+  --rptmod moodle \
+  --rptmod_opt moodle_cm_id 6615 \
+  --activate
+
+
+
+
+./cog-cli.py --server csci1300 assignment delete --uid eb4c7046-b3a7-462d-a516-f08cef200b2c
+./cog-cli.py --server csci1300 assignment activate --uid 682eb1fa-1f84-4d2c-8c77-071b78969040
+./cog-cli.py --server csci1300 assignment list
+
+
+
